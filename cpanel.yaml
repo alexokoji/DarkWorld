@@ -1,0 +1,51 @@
+## cpanel.yaml - cPanel Node.js Application template
+#
+# This file is an optional manifest to document how to deploy the app to cPanel's
+# "Setup Node.js App" (Application Manager). It is informational only — cPanel
+# does not automatically consume this file unless you or a script uses it.
+#
+# IMPORTANT: Do NOT store secrets in this file. Use the cPanel Application
+# Manager UI to set environment variables (ADMIN_PASS, JWT_SECRET, etc.).
+
+app:
+  name: darkweb-watch
+  description: "Dark World Shop - Node/Express admin + storefront"
+  node_version: "18"          # recommended Node.js version (adjust to your host)
+  application_root: "./"      # relative path inside your cPanel home where the app lives
+  startup_file: "server.js"   # entrypoint used by cPanel
+  npm_install: true            # run npm install during deploy
+
+environment:
+  # Do NOT put real secrets here. Add these keys in the cPanel UI instead.
+  - ADMIN_USER: "admin"
+  - ADMIN_PASS: "<set-via-cpanel>"
+  - JWT_SECRET: "<set-via-cpanel>"
+  - JWT_EXPIRES_IN: "1h"
+  # Optional: SSL key/cert paths (if you plan to use local certs instead of AutoSSL)
+  - SSL_KEY_PATH: ""
+  - SSL_CERT_PATH: ""
+
+notes:
+  - "Before uploading: remove local .env and other secrets from the archive."
+  - "Prefer configuring environment variables via the cPanel Application Manager."
+  - "The app currently serves static files from the project root. For safety,
+     consider moving public assets to a `public/` folder and updating server.js:
+     app.use(express.static(path.join(__dirname, 'public')));")
+  - "If your cPanel provides passenger logs or application logs, use those to
+     inspect runtime errors. Typical log locations vary by host."
+
+postdeploy:
+  - "Run 'npm install --production' in the application root (Application Manager provides a button)."
+  - "Start the application from the Application Manager (Start/Restart)."
+  - "Enable AutoSSL for the domain/subdomain after start to get HTTPS."
+
+examples:
+  # Example sequence (manual steps shown for clarity):
+  # 1. Upload project to /home/<user>/nodeapps/darkweb
+  # 2. In cPanel -> Setup Node.js App -> Create Application:
+  #    - Node.js version: 18
+  #    - App root: nodeapps/darkweb (or the folder you uploaded)
+  #    - App URL: choose domain/subdomain
+  #    - Startup file: server.js
+  # 3. Set environment variables in the UI (ADMIN_USER, ADMIN_PASS, JWT_SECRET etc.)
+  # 4. Click "NPM Install" then "Restart" to start the app.
