@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional dark web monitoring service to protect your personal information and credentials">
+    <title>Dark World Shop - Monitor Your Digital Identity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="home">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a class="logo" href="index.html">
+                    <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="32" height="32" rx="10" fill="url(#dw-gradient)"/>
+                        <path d="M16 8L21 15H11L16 8Z" fill="white"/>
+                        <path d="M10 18L16 24L22 18H10Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="dw-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366F1"/>
+                                <stop offset="1" stop-color="#8B5CF6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">Dark World Shop</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#home" data-nav="home">Overview</a></li>
+                    <li><a href="features.html" data-nav="features">Features</a></li>
+                    <li><a href="products.html" data-nav="products">Products</a></li>
+                    <li>
+                        <button class="cart-trigger" type="button" data-open-cart data-nav="cart" aria-label="Open cart">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 6h-2l2 10h12l2-7H7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+                                <circle cx="17" cy="19" r="1.5" fill="currentColor"/>
+                            </svg>
+                            <span class="cart-badge" data-cart-badge style="display: none;">0</span>
+                        </button>
+                    </li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero hero--split">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="hero-grid-lines"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Live intelligence • Wallet-ready checkout</p>
+                    <h1>
+                        Confidence for every identity
+                        <span class="gradient-text">exposed on the dark web</span>
+                    </h1>
+                    <p class="hero-description">
+                        Surface breaches in seconds, stream actionable evidence to your stack, and settle
+                        with cold wallets—all inside one beautiful monitoring console.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="products.html" class="btn-primary">
+                            Browse Products
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <button class="btn-secondary" onclick="scrollToSection('how-it-works')">
+                            See the workflow
+                        </button>
+                    </div>
+                    <div class="hero-pills">
+                        <div class="pill">24/7 dark web crawlers</div>
+                        <div class="pill">AI breach triage</div>
+                        <div class="pill">Wallet-first checkout</div>
+                    </div>
+                    <div class="hero-stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">Records monitored</span>
+                            <span class="stat-value">10M+</span>
+                            <span class="stat-sub">high-risk assets</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Response speed</span>
+                            <span class="stat-value">37s</span>
+                            <span class="stat-sub">median detection</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Coverage</span>
+                            <span class="stat-value">190+</span>
+                            <span class="stat-sub">markets & forums</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="media-surface">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Dark web intelligence map" class="hero-image" loading="lazy">
+                        <div class="media-glow"></div>
+                    </div>
+                    <div class="media-widget scan-widget">
+                        <div>
+                            <p class="widget-label">Status</p>
+                            <p class="widget-value">Crawlers online</p>
+                        </div>
+                        <div class="pulse"></div>
+                    </div>
+                    <div class="media-widget alert-widget">
+                        <div class="widget-icon">⚡</div>
+                        <div>
+                            <p class="widget-label">Instant alert</p>
+                            <p class="widget-value">Credentials leaked</p>
+                        </div>
+                        <span class="widget-badge">LIVE</span>
+                    </div>
+                    <div class="media-widget wallet-widget">
+                        <div>
+                            <p class="widget-label">Wallet checkout</p>
+                            <p class="widget-value">BTC • ETH • USDT</p>
+                        </div>
+                        <button class="widget-link" type="button" data-open-cart>Open cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signal-strip">
+        <div class="container">
+            <p>Trusted by security teams at</p>
+            <div class="signal-marquee">
+                <span>AtlasSec</span>
+                <span>DeepShield</span>
+                <span>Nova Payments</span>
+                <span>Vector Labs</span>
+                <span>Zenith Cloud</span>
+                <span>Orion Capital</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="intel-panels">
+        <div class="container intel-grid">
+            <article class="intel-card">
+                <div class="intel-icon">🛰️</div>
+                <h3>Autonomous crawlers</h3>
+                <p>Our drones sift through hidden markets, onion mirrors, and invite-only forums every four minutes looking for digital exhaust tied to your brand.</p>
+                <ul>
+                    <li>Multi-language marketplace coverage</li>
+                    <li>Leak-site fingerprinting</li>
+                    <li>Automated context summaries</li>
+                </ul>
+            </article>
+            <article class="intel-card">
+                <div class="intel-icon">💳</div>
+                <h3>Wallet-ready checkout</h3>
+                <p>Complete any plan with Bitcoin, Ethereum, or USDT. Once you add a product to cart, we surface unique wallet addresses and confirm in minutes.</p>
+                <ul>
+                    <li>One-tap add to cart from products</li>
+                    <li>Dedicated wallet IDs per product</li>
+                    <li>Real-time payment confirmations</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section class="platform-snapshot">
+        <div class="container snapshot-grid">
+            <div class="snapshot-text">
+                <p class="eyebrow">Platform preview</p>
+                <h2>Human-readable intelligence without the noise</h2>
+                <p>Triaged breach reports, severity scoring, wallet-ready payments, and exportable evidence packets ship with every plan.</p>
+                <div class="snapshot-points">
+                    <div>
+                        <h4>Evidence locker</h4>
+                        <p>Download redacted screenshots, onion links, and IOC bundles to hand to legal or SOC instantly.</p>
+                    </div>
+                    <div>
+                        <h4>Collaboration</h4>
+                        <p>Assign incidents, leave playbook notes, and sync to Slack or Teams without switching tabs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="snapshot-media">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Monitoring dashboard preview" loading="lazy">
+                <div class="snapshot-card">
+                    <span>Next update</span>
+                    <strong>02:17</strong>
+                    <p>Dark market sweep in progress</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">Core capabilities</p>
+                <h2 class="section-title">Comprehensive protection</h2>
+                <p class="section-description">
+                    Advanced monitoring technology to keep your digital identity safe
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L20 10H12L16 4Z" fill="currentColor"/>
+                            <path d="M8 14L16 22L24 14H8Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Continuous scanning of dark web marketplaces, forums, and databases to detect your compromised credentials instantly.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 12V16L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Instant Alerts</h3>
+                    <p>Receive immediate notifications via email, SMS, or push alerts when your information is detected on the dark web.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect x="6" y="8" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 14H26" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Email Monitoring</h3>
+                    <p>Monitor your email addresses across multiple dark web sources to catch breaches before they cause damage.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 6L26 12V20L16 26L6 20V12L16 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Password Protection</h3>
+                    <p>Track if your passwords have been exposed in data breaches and get recommendations for stronger security.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 8C11.6 8 8 11.6 8 16C8 20.4 11.6 24 16 24C20.4 24 24 20.4 24 16C24 11.6 20.4 8 16 8Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 12V16L19 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Credit Card Monitoring</h3>
+                    <p>Get alerts if your credit card information appears in dark web databases or marketplaces.</p>
+                </div>
+                <div class="feature-card" data-animate="fade-up">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 12H24M8 16H24M8 20H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Detailed Reports</h3>
+                    <p>Access comprehensive reports showing where your data was found and actionable steps to secure your accounts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">Workflow</p>
+                <h2 class="section-title">How it works</h2>
+                <p class="section-description">
+                    Simple, secure, and effective protection in three easy steps
+                </p>
+            </div>
+            <div class="steps">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Sign Up & Add Your Information</h3>
+                        <p>Create your account and securely add the email addresses, phone numbers, and other information you want to monitor.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>We Monitor Continuously</h3>
+                        <p>Our advanced systems scan dark web databases, marketplaces, and forums 24/7 to detect any mentions of your information.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Get Instant Alerts</h3>
+                        <p>If we find your information, you'll receive an immediate alert with details and recommended actions to protect yourself.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <div class="cart-drawer" data-cart-drawer aria-hidden="true">
+        <div class="cart-drawer__overlay" data-cart-close></div>
+        <aside class="cart-drawer__panel">
+            <div class="cart-drawer__head">
+                <p class="eyebrow">Cart & wallets</p>
+                <button class="cart-drawer__close" type="button" data-cart-close aria-label="Close cart">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <h2>Your cart</h2>
+            <div data-cart-empty class="cart-empty">
+                <p>Your cart is empty</p>
+                <a class="btn-primary" href="products.html">Browse products</a>
+            </div>
+            <div data-cart-summary class="cart-items-container">
+                <div data-cart-items class="cart-items-list"></div>
+                <div class="cart-total" data-cart-total>
+                    <div class="cart-total__row">
+                        <span>Subtotal</span>
+                        <span data-cart-subtotal>$0</span>
+                    </div>
+                    <div class="cart-total__row cart-total__row--total">
+                        <span>Total</span>
+                        <span data-cart-total-amount>$0</span>
+                    </div>
+                </div>
+                <div class="cart-footer">
+                    <a class="btn-secondary" href="products.html">Continue shopping</a>
+                    <button class="btn-primary" type="button" data-checkout-btn>Proceed to checkout</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                            <path d="M16 8L20 14H12L16 8Z" fill="white"/>
+                            <path d="M10 18L16 24L22 18H10Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#6366F1"/>
+                                    <stop offset="1" stop-color="#8B5CF6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="logo-text">Dark World Shop</span>
+                    </div>
+                    <p class="footer-description">
+                        Protecting your digital identity with advanced dark web monitoring technology.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#" data-open-cart>Cart</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dark World Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/691bd4e00bb584195d2dbee3/1jaabf4ah';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
+

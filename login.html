@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <main class="app" style="max-width:480px;margin:40px auto;">
+    <div class="panel">
+      <h2>Admin Login</h2>
+      <form id="login" style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
+        <input id="user" placeholder="Username" required />
+        <input id="pass" placeholder="Password" type="password" required />
+        <div style="display:flex;gap:8px">
+          <button id="login-btn" type="submit">Log in</button>
+          <a href="admin.html" style="align-self:center; margin-left:8px; color:var(--muted)">Back</a>
+        </div>
+        <div id="msg" style="color:var(--muted)"></div>
+      </form>
+      <p style="margin-top:10px; color:var(--muted); font-size:13px">Enter your admin credentials to continue.</p>
+    </div>
+  </main>
+  <script>
+    // support redirect: ?redirect=/admin.html or other
+    function getRedirect(){ try{ const p = new URLSearchParams(location.search); return p.get('redirect') || '/admin.html'; }catch(e){ return '/admin.html'; } }
+    document.getElementById('login').addEventListener('submit', async function(e){
+      e.preventDefault();
+      const user = document.getElementById('user').value;
+      const pass = document.getElementById('pass').value;
+      const msg = document.getElementById('msg'); msg.textContent = '';
+      try{
+        const res = await fetch('/api/auth', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ user, pass }) });
+        if(!res.ok){ msg.textContent = 'Login failed'; return; }
+        const js = await res.json();
+        if(js && js.token){
+          sessionStorage.setItem('adminToken', js.token); sessionStorage.setItem('adminUser', user);
+          // redirect to target (use replace so back button doesn't go back to login)
+          const target = getRedirect();
+          window.location.replace(target);
+        } else {
+          msg.textContent = 'Login failed';
+        }
+      }catch(err){ msg.textContent = 'Network error during login'; }
+    });
+  </script>
+</body>
+</html>

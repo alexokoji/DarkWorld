@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the full Dark World Shop feature set and platform capabilities.">
+    <title>Dark World Shop — Feature Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body data-page="features">
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a class="logo" href="index.html">
+                    <svg width="34" height="34" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="32" height="32" rx="10" fill="url(#dw-gradient)"/>
+                        <path d="M16 8L21 15H11L16 8Z" fill="white"/>
+                        <path d="M10 18L16 24L22 18H10Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="dw-gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366F1"/>
+                                <stop offset="1" stop-color="#8B5CF6"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">Dark World Shop</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#home" data-nav="home">Overview</a></li>
+                    <li><a href="features.html" data-nav="features">Features</a></li>
+                    <li><a href="products.html" data-nav="products">Products</a></li>
+                    <li>
+                        <button class="cart-trigger" type="button" data-open-cart data-nav="cart" aria-label="Open cart">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 6h-2l2 10h12l2-7H7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="9" cy="19" r="1.5" fill="currentColor"/>
+                                <circle cx="17" cy="19" r="1.5" fill="currentColor"/>
+                            </svg>
+                            <span class="cart-badge" data-cart-badge style="display: none;">0</span>
+                        </button>
+                    </li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="container page-hero-grid">
+            <div>
+                <p class="eyebrow">Feature playbook</p>
+                <h1>Every signal you need, beautifully organized</h1>
+                <p>Dark World Shop layers curated threat intelligence, breach evidence, and wallet-ready payments into one intuitive platform.</p>
+                <div class="hero-cta">
+                    <a class="btn-primary" href="products.html">Browse products</a>
+                    <a class="btn-secondary" href="index.html#contact">Talk to security</a>
+                </div>
+                <div class="hero-pills">
+                    <div class="pill">Leaksite monitoring</div>
+                    <div class="pill">API + webhooks</div>
+                    <div class="pill">Evidence locker</div>
+                </div>
+            </div>
+            <div class="feature-illustration">
+                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80" alt="Feature overview" loading="lazy">
+                <div class="snapshot-card">
+                    <span>Signal quality</span>
+                    <strong>99.5%</strong>
+                    <p>Noise removed automatically</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="feature-showcase">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow">Feature families</p>
+                <h2>Modular coverage layered for every team</h2>
+                <p class="section-description">Mix and match intelligence suites, reporting packs, and wallet workflows.</p>
+            </div>
+            <div class="feature-matrix">
+                <article class="feature-panel">
+                    <div class="panel-icon">🛰️</div>
+                    <h3>Dark Web Intelligence</h3>
+                    <p>Invite-only marketplaces, ransomware leak sites, and multilingual forums mapped for you.</p>
+                    <ul>
+                        <li>Automated marketplace scans</li>
+                        <li>Credential & card discovery</li>
+                        <li>IOC exports & JSON feeds</li>
+                    </ul>
+                </article>
+                <article class="feature-panel">
+                    <div class="panel-icon">📊</div>
+                    <h3>Signal Analytics</h3>
+                    <p>Severity scoring, trend comparisons, and industry benchmarking in a modern UI.</p>
+                    <ul>
+                        <li>Executive-ready summaries</li>
+                        <li>Drift analysis & heatmaps</li>
+                        <li>Automated PDF briefs</li>
+                    </ul>
+                </article>
+                <article class="feature-panel">
+                    <div class="panel-icon">🔐</div>
+                    <h3>Identity Safeguards</h3>
+                    <p>Email, password, credit card, and VIP monitoring with personal alert channels.</p>
+                    <ul>
+                        <li>Unlimited alias tracking</li>
+                        <li>SMS + push notifications</li>
+                        <li>Guided remediation steps</li>
+                    </ul>
+                </article>
+                <article class="feature-panel">
+                    <div class="panel-icon">🤝</div>
+                    <h3>Collaboration & Wallets</h3>
+                    <p>Assign incidents, integrate ticketing, and settle invoices via crypto wallets.</p>
+                    <ul>
+                        <li>Slack, Teams, Jira hooks</li>
+                        <li>Role-based access</li>
+                        <li>BTC • ETH • USDT checkout</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-timeline">
+        <div class="container timeline-grid">
+            <div>
+                <p class="eyebrow">Pipeline view</p>
+                <h2>From discovery to action in one view</h2>
+                <p>Each module is orchestrated so analysts can see context, evidence, and payments without extra tabs.</p>
+            </div>
+            <ol class="timeline-list">
+                <li>
+                    <span>01</span>
+                    <div>
+                        <h4>Discovery bots</h4>
+                        <p>Capture data leaks across onion mirrors and Telegram drops every four minutes.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>02</span>
+                    <div>
+                        <h4>AI triage</h4>
+                        <p>Summaries, severity, and recommended playbooks generated automatically.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>03</span>
+                    <div>
+                        <h4>Evidence locker</h4>
+                        <p>Redacted screenshots, raw dumps, IOC bundles, and legal-ready PDF exports.</p>
+                    </div>
+                </li>
+                <li>
+                    <span>04</span>
+                    <div>
+                        <h4>Wallet settlement</h4>
+                        <p>Finalize purchases via BTC, ETH, or USDT with dynamic wallet addresses.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="feature-lab">
+        <div class="container lab-grid">
+            <div class="lab-card">
+                <h3>Visual insights</h3>
+                <p>Compare exposure level by business unit using animated charts and gradients.</p>
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Analytics charts" loading="lazy">
+            </div>
+            <div class="lab-card">
+                <h3>Incident workspace</h3>
+                <p>Assign incidents, leave context, and trigger notifications from a collaborative board.</p>
+                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80" alt="Workspace board" loading="lazy">
+            </div>
+            <div class="lab-card">
+                <h3>Wallet desk</h3>
+                <p>See active invoices, confirmation states, and immutable transaction logs instantly.</p>
+                <img src="https://images.unsplash.com/photo-1532033375034-a29004ea9769?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wallet UI" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <div class="cart-drawer" data-cart-drawer aria-hidden="true">
+        <div class="cart-drawer__overlay" data-cart-close></div>
+        <aside class="cart-drawer__panel">
+            <div class="cart-drawer__head">
+                <p class="eyebrow">Cart & wallets</p>
+                <button class="cart-drawer__close" type="button" data-cart-close aria-label="Close cart">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <h2>Fund your dark web monitoring suite in crypto.</h2>
+            <p>Skip pricing tables. Add a suite to your cart, copy the live wallet address, and receive confirmation right here the moment your payment settles.</p>
+            <div class="cart-summary-card">
+                <h3 data-cart-title>No product added yet</h3>
+                <p data-cart-description>Select a product to unlock wallet addresses and SLAs.</p>
+                <div class="cart-meta">
+                    <div>
+                        <span class="stat-label">Wallets</span>
+                        <span class="stat-value">BTC • ETH • USDT</span>
+                        <span class="stat-sub">Unique per product</span>
+                    </div>
+                    <div>
+                        <span class="stat-label">Status</span>
+                        <span class="stat-value">Awaiting cart</span>
+                        <span class="stat-sub">Add a suite to begin</span>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn-primary" type="button" data-cart-button disabled>View wallet addresses</button>
+                    <a class="btn-secondary" href="products.html">Browse products</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                            <path d="M16 8L20 14H12L16 8Z" fill="white"/>
+                            <path d="M10 18L16 24L22 18H10Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#6366F1"/>
+                                    <stop offset="1" stop-color="#8B5CF6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="logo-text">Dark World Shop</span>
+                    </div>
+                    <p class="footer-description">
+                        Protecting your digital identity with advanced dark web monitoring technology.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#" data-open-cart>Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dark World Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/691bd4e00bb584195d2dbee3/1jaabf4ah';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+</html>
+
